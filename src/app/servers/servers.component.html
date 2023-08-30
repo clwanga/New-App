@@ -1,7 +1,15 @@
+<div class="my-3">
+  <label for="names">Name</label>
+  <input (input)="onUpdateServer($event)" type="text" class="form-control w-25" id="names" />
+</div>
 
-<button [disabled]="!allowNewServer" class="btn btn-primary">
-    Add Server
+<button
+  (click)="onCreateServer()"
+  [disabled]="allowNewServer"
+  class="btn btn-primary my-3"
+>
+  Add Server
 </button>
-<p [innerHTML]="allowNewServer"></p>
+<p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
