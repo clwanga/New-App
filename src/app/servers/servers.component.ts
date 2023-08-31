@@ -9,7 +9,8 @@ export class ServersComponent {
   //defining class data
   allowNewServer:boolean = true;
   serverCreationStatus:string = "No server was created";
-  formInput:string;
+  formInput:string = "testing";
+  
 
   //class constructor
   constructor(){
@@ -22,6 +23,7 @@ export class ServersComponent {
     this.serverCreationStatus = "New server was created";
   }
 
+  //method called by an input 
   onUpdateServer(event:any){
     //this.formInput = event;
 
